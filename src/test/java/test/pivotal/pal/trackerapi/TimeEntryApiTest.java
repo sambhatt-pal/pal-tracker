@@ -93,10 +93,10 @@ public class TimeEntryApiTest {
 
         DocumentContext updateJson = parse(updateResponse.getBody());
         assertThat(updateJson.read("$.id", Long.class)).isEqualTo(id);
-        assertThat(updateJson.read("$.projectId", Long.class)).isEqualTo(2L);
-        assertThat(updateJson.read("$.userId", Long.class)).isEqualTo(3L);
+        assertThat(updateJson.read("$.projectId", int.class)).isEqualTo(2L);
+        assertThat(updateJson.read("$.userId", int.class)).isEqualTo(3L);
         assertThat(updateJson.read("$.date", String.class)).isEqualTo("tomorrow");
-        assertThat(updateJson.read("$.hours", Long.class)).isEqualTo(9);
+        assertThat(updateJson.read("$.hours", int.class)).isEqualTo(9);
     }
 
     @Test

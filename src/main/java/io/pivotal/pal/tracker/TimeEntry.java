@@ -17,7 +17,7 @@ public class TimeEntry {
         this.hours = hours;
     }
 
-    public TimeEntry(long id, int projectId, int userId, String date, int hours) {
+    public TimeEntry(long id, long projectId, long userId, String date, int hours) {
         this.id = id;
         this.projectId = projectId;
         this.userId = userId;
@@ -33,11 +33,11 @@ public class TimeEntry {
         this.id = id;
     }
 
-    public int getProjectId() {
+    public long getProjectId() {
         return projectId;
     }
 
-    public int getUserId() {
+    public long getUserId() {
         return userId;
     }
 

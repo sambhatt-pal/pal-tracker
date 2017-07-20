@@ -43,7 +43,7 @@ public class TimeEntryControllerTest {
 
     @Test
     public void testRead() throws Exception {
-        TimeEntry expected = new TimeEntry(1L, 123, 456, "today", 8);
+        TimeEntry expected = new TimeEntry(1000, 123, 456, "today", 8);
         doReturn(expected)
             .when(timeEntryRepository)
             .find(1L);
